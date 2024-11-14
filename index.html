@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mis tareas</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <script type="module" src="./js/main-2.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Mis tareas</h1>
+            <button class="todo-clean">Limpiar tareas finalizadas</button>
+            <button class="todo-empty">Borrar todas las tareas</button>
+        </header>
+
+        <form class="todo-form">
+            <fieldset>
+                <label for="todo">Nueva tarea</label>
+                <input
+                    type="text"
+                    name="todo"
+                    id="todo"
+                    maxlength="150"
+                    minlength="10"
+                    autofocus
+                    required />
+                <button>Añadir tarea</button>
+            </fieldset>
+        </form>
+
+        <ul class="todo-list">
+            <!-- <li>
+                <input type="checkbox" />
+                <p>Pasear al perro</p>
+                <time>08/11/2022</time>
+            </li>
+            <li class="done">
+                <input type="checkbox" checked />
+                <p>Hacer la cena</p>
+                <time>09/11/2022</time>
+            </li>
+            <li>
+                <input type="checkbox" />
+                <p>Estudiar JavaScript</p>
+                <time>09/11/2022</time>
+            </li> -->
+        </ul>
+    </body>
+</html>

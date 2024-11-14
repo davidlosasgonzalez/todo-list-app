@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --dark: black;
+    --medium: gray;
+    --light: lightgray;
+    --action: #0075ff;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* Estilos comunes */
+
+button {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    font-size: 0;
+    margin-left: 1rem;
+    background-color: var(--action);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Elementos */
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--light);
+}
+
+header h1 {
+    flex-grow: 1;
+}
+
+header button.todo-clean {
+    background-image: url('/img/broom.svg');
+}
+
+header button.todo-empty {
+    background-image: url('/img/trash.svg');
+}
+
+/* Form */
+form {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 1rem;
+    background-color: var(--light);
+}
+
+form fieldset {
+    border: none;
+    display: flex;
+}
+
+form fieldset label {
+    display: none;
+}
+
+form fieldset input {
+    flex-grow: 1;
+    border: 1px solid var(--dark);
+    font-size: 1.25rem;
+    padding: 0.5rem;
+}
+
+form fieldset button {
+    background-image: url('/img/new.svg');
+}
+
+/* Todo list */
+
+ul.todo-list {
+    padding: 1rem;
+    list-style: none;
+}
+
+ul.todo-list li {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    cursor: pointer;
+
+    grid-template-areas:
+        'todo checkbox'
+        'time checkbox';
+
+    border-bottom: 1px solid var(--medium);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+ul.todo-list li input {
+    grid-area: checkbox;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+ul.todo-list li p {
+    grid-area: todo;
+    font-size: 1.5rem;
+    word-break: break-all;
+}
+
+ul.todo-list li time {
+    grid-area: time;
+    font-size: 0.75rem;
+    color: var(--medium);
+}
+
+li.done {
+    opacity: 0.25;
+}
+
+li.done p {
+    text-decoration: line-through;
+}
